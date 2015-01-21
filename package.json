@@ -1,21 +1,36 @@
 {
-    "name": "wingspan-cursor",
-    "version": "0.1.0",
-    "description": "",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Wingspan Technology, Inc.",
-    "license": "MIT",
-    "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-cli": "~0.1.9",
-        "grunt-contrib-jshint": "~0.7.1",
-        "grunt-contrib-requirejs": "~0.4.1",
-        "grunt-bower-task": "~0.3.4",
-        "grunt-subgrunt": "~0.2.4",
-        "grunt-react": "~0.8.2",
-        "grunt-contrib-less": "~0.7.0",
-        "grunt-contrib-clean": "~0.5.0"
-    }
+  "name": "react-json-editor",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "lint": "jsxhint lib/ test/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "make js",
+    "build-example": "webpack",
+    "check-build": "make check-build",
+    "dev": "echo 'Open http://localhost:4002'; webpack-dev-server --config webpack-dev-server.config.js --hot --progress --colors --port 4002 --content-base ."
+  },
+  "author": "Wingspan Technology, Inc.",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "6to5": "^2.2.0",
+    "6to5-loader": "^1.0.0",
+    "css-loader": "^0.9.0",
+    "exports-loader": "^0.6.2",
+    "imports-loader": "^0.6.3",
+    "jsxhint": "^0.9.0",
+    "lodash": "^2.4.1",
+    "precommit-hook": "^1.0.7",
+    "react-hot-loader": "^1.0.4",
+    "style-loader": "^0.8.2",
+    "webpack": "^1.4.14",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "react": "^0.12.2",
+    "react-cursor": "^0.9.2",
+    "react-treeview": "^0.3.11"
+  }
 }
